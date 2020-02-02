@@ -1,4 +1,4 @@
-package br.com.AppiumMobile;
+package testes;
 
 import java.net.MalformedURLException;
 

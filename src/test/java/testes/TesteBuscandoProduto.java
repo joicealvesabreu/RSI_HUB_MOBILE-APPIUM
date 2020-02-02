@@ -1,9 +1,11 @@
-package br.com.AppiumMobile;
+package testes;
 
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -50,7 +52,21 @@ public class TesteBuscandoProduto {
 	
 	@Test
 	public void testes() {
+		page.Search();
+		page.Lupa();
+		page.Produto();
+		page.Carinho();
+		String chegounologin = driver
+				.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView")).getText();
+		Assert.assertTrue(chegounologin.contains("Login"), "Login");
 		
+	}
+	@Test
+	public void testes2() {
+		page.SearchFalse();
+		page.Lupa();
+		String naoencontrou = driver.findElement(By.xpath("	//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.TextView")).getText();
+		Assert.assertTrue(naoencontrou.contains("No Results for"));
 	}
 	
 	@AfterMethod
@@ -71,7 +87,7 @@ public class TesteBuscandoProduto {
 		logger.log(Status.PASS, "Produto adicionado");
 		extent.flush();
 
-		DriverFactory.FechandoDriver(driver);
+		//DriverFactory.FechandoDriver(driver);
 	}
 
 	

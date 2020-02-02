@@ -1,4 +1,4 @@
-package br.com.AppiumMobile;
+package testes;
 
 import java.net.MalformedURLException;
 
@@ -19,48 +19,45 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import PageFactory.DriverFactory;
-import PageFactory.PageAdvantage;
+import PageFactory.PagePesquisandoPorMassa;
 import utility.Utility;
 
-public class TesteTelaPrincipal {
+public class TesteBuscadeprodutoNegativo {
 
+	
 	public WebDriver driver;
-	public PageAdvantage page;
+	public PagePesquisandoPorMassa page;
 	public ExtentReports extent;
 	public ExtentTest logger, logger1;
 	public ExtentHtmlReporter reporter;
 
 	public void TestecomTestng(WebDriver driver) {
 		this.driver = driver;
-		page = PageFactory.initElements(driver, PageAdvantage.class);
+		page = PageFactory.initElements(driver, PagePesquisandoPorMassa.class);
 		
 	}
 
 	@BeforeClass
 	public void report() {
-		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./relatorios/TesteTelaInicial.html");
+		ExtentHtmlReporter reporter = new ExtentHtmlReporter("./relatorios/TesteMassadedadosNegativo.html");
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
-		logger = extent.createTest("Teste de produto");
+		logger = extent.createTest("Teste Buscando Produto de Massa");
 
 	} 
 
 	@BeforeMethod
 	public void before() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
-		page = PageFactory.initElements(driver, PageAdvantage.class);
+		page = PageFactory.initElements(driver, PagePesquisandoPorMassa.class);
 	}
-
 	@Test
-	public void teste1() {
-		page.ClicarLaptop();
-		page.EscolhendoLaptop();
-		page.Adicionandooproduto();
-		String chegounologin = driver
-				.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView")).getText();
-		Assert.assertTrue(chegounologin.contains("Login"), "Login");
+	public void testes2() {
+		page.SearchFalse();
+		page.Lupa();
+		String naoencontrou = driver.findElement(By.xpath("	//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.TextView")).getText();
+		Assert.assertTrue(naoencontrou.contains("- No Results for \"celular\"-"));
 	}
-	
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.SUCCESS) {
@@ -79,7 +76,8 @@ public class TesteTelaPrincipal {
 		logger.log(Status.PASS, "Produto adicionado");
 		extent.flush();
 
-		DriverFactory.FechandoDriver(driver);
+		//DriverFactory.FechandoDriver(driver);
 	}
 
+	
 }
