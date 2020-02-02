@@ -5,17 +5,13 @@ import java.net.MalformedURLException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
 import PageFactory.DriverFactory;
-import PageFactory.PageAdvantage;
 import PageFactory.PageCadastro;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.PerformsActions;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.offset.PointOption;
+
 
 
 
@@ -56,8 +52,11 @@ public class TestesCadastro {
 		page.City();
 		page.Enter();
 		page.Zip();
+		page.Enter();
 		page.Termo1();
+		page.Enter();
 		page.Termo2();
+		page.Enter();
 	//	page.Register();
 
 	}

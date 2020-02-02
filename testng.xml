@@ -3,6 +3,6 @@
 <suite name="Suite" >
  <test name="Test">
  <classes>
- <class name="appium_Package.Appium_TestNG_Sample_One"/>
+ <class name="br.com.AppiumMobile.TesteTelaPrincipal"/>
  </classes>
  </test> <!-- Test -->

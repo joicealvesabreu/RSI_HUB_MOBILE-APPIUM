@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5" started-at="2020-01-31T19:22:43Z" finished-at="2020-01-31T19:22:43Z">
+  <suite name="Default suite" duration-ms="115387" started-at="2020-02-02T16:37:34Z" finished-at="2020-02-02T16:39:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5" started-at="2020-01-31T19:22:43Z" finished-at="2020-01-31T19:22:43Z">
+    <test name="Default test" duration-ms="115387" started-at="2020-02-02T16:37:34Z" finished-at="2020-02-02T16:39:30Z">
+      <class name="br.com.AppiumMobile.TesteTelaPrincipal">
+        <test-method status="PASS" signature="report()[pri:0, instance:br.com.AppiumMobile.TesteTelaPrincipal@55d56113]" name="report" is-config="true" duration-ms="147" started-at="2020-02-02T16:37:34Z" finished-at="2020-02-02T16:37:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="before()[pri:0, instance:br.com.AppiumMobile.TesteTelaPrincipal@55d56113]" name="before" is-config="true" duration-ms="85214" started-at="2020-02-02T16:37:34Z" finished-at="2020-02-02T16:39:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="teste1()[pri:0, instance:br.com.AppiumMobile.TesteTelaPrincipal@55d56113]" name="teste1" duration-ms="13336" started-at="2020-02-02T16:39:00Z" finished-at="2020-02-02T16:39:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teste1 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.AppiumMobile.TesteTelaPrincipal@55d56113]" name="afterMethod" is-config="true" duration-ms="16673" started-at="2020-02-02T16:39:13Z" finished-at="2020-02-02T16:39:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=teste1 status=SUCCESS method=TesteTelaPrincipal.teste1()[pri:0, instance:br.com.AppiumMobile.TesteTelaPrincipal@55d56113] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- br.com.AppiumMobile.TesteTelaPrincipal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
