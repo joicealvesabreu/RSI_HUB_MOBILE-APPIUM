@@ -37,8 +37,8 @@ public class DriverFactory {
 
 	public static void FechandoDriver(WebDriver driver) {
 
-		if (driver != null)
-			driver.quit();
+		if ( null != driver)
+			driver.close();
 	}
 
 

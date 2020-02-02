@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,23 +20,17 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
-import br.com.rsinet.mobile.appium.pageFactory.PagePesquisandoPorMassa;
+import br.com.rsinet.mobile.appium.pageFactory.PagePesquisaPorMassa;
+
 import br.com.rsinet.mobile.appium.utility.Utility;
 
 public class TesteBuscadeprodutoNegativo {
 
-	
 	public WebDriver driver;
-	public PagePesquisandoPorMassa page;
+	public PagePesquisaPorMassa page;
 	public ExtentReports extent;
 	public ExtentTest logger, logger1;
 	public ExtentHtmlReporter reporter;
-
-	public void TestecomTestng(WebDriver driver) {
-		this.driver = driver;
-		page = PageFactory.initElements(driver, PagePesquisandoPorMassa.class);
-		
-	}
 
 	@BeforeClass
 	public void report() {
@@ -44,22 +39,26 @@ public class TesteBuscadeprodutoNegativo {
 		extent.attachReporter(reporter);
 		logger = extent.createTest("Teste Buscando Produto de Massa");
 
-	} 
+	}
 
 	@BeforeMethod
 	public void before() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
-		page = PageFactory.initElements(driver, PagePesquisandoPorMassa.class);
+		page = PageFactory.initElements(driver, PagePesquisaPorMassa.class);
 	}
+
 	@Test
 	public void testes2() {
 		page.SearchFalse();
 		page.Lupa();
-		String naoencontrou = driver.findElement(By.xpath("	//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.TextView")).getText();
+		String naoencontrou = driver.findElement(By.xpath(
+				"	//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.TextView"))
+				.getText();
 		Assert.assertTrue(naoencontrou.contains("- No Results for \"celular\"-"));
 	}
-	@AfterMethod
-	public void afterMethod(ITestResult result) throws Exception {
+
+	@AfterSuite
+	public void finaliza(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.SUCCESS) {
 
 			String temp = Utility.getScreenshot(driver);
@@ -76,8 +75,7 @@ public class TesteBuscadeprodutoNegativo {
 		logger.log(Status.PASS, "Produto adicionado");
 		extent.flush();
 
-		//DriverFactory.FechandoDriver(driver);
+		// DriverFactory.FechandoDriver(driver);
 	}
 
-	
 }

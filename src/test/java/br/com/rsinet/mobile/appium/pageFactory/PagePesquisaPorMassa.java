@@ -1,17 +1,16 @@
 package br.com.rsinet.mobile.appium.pageFactory;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class PagePesquisandoPorMassa {
+public class PagePesquisaPorMassa {
 	private WebDriver driver;
 	private WebElement element;
 
-	public void PagePesquisandoPorMassa (WebDriver driver) {
+	public void PagePesquisaPorMassa(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

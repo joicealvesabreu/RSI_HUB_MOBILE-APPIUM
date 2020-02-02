@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="br.com.rsinet.mobile.appium.teste.TesteBuscandoProduto">
+      <class name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal">
         <methods>
-          <include name="report"/>
+          <include name="teste1"/>
           <include name="afterMethod"/>
-          <include name="testes"/>
+          <include name="report"/>
           <include name="before"/>
         </methods>
-      </class> <!-- br.com.rsinet.mobile.appium.teste.TesteBuscandoProduto -->
+      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

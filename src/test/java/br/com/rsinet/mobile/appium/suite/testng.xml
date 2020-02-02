@@ -3,8 +3,11 @@
 <suite name="Suite">
 	<test name="Test">
 		<classes>
-			<class name="br.com.rsinet.mobile.appium.teste.TesteTelaPrincipal" />
-		 <!-- 	<class name="br.com.rsinet.mobile.appium.teste.TesteBuscandoProduto" /> -->
+			<class
+				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal" />
+			<class
+				name="br.com.rsinet.mobile.appium.testes.TesteBuscandoProduto" />
+
 		</classes>
-	</test> 
+	</test>
 </suite>
