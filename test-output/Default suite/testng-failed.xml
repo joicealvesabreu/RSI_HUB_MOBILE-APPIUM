@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.AppiumMobile.TesteBuscadeprodutoNegativo">
+      <class name="br.com.rsinet.mobile.appium.testes.TestesCadastro">
         <methods>
-          <include name="testes2"/>
-          <include name="report"/>
           <include name="before"/>
           <include name="afterMethod"/>
+          <include name="cadastrovalido"/>
+          <include name="report"/>
         </methods>
-      </class> <!-- br.com.AppiumMobile.TesteBuscadeprodutoNegativo -->
+      </class> <!-- br.com.rsinet.mobile.appium.testes.TestesCadastro -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

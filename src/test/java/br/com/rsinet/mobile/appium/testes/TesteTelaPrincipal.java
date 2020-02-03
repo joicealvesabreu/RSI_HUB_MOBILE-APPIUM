@@ -4,13 +4,12 @@ import java.net.MalformedURLException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -21,7 +20,7 @@ import com.aventstack.extentreports.ExtentTest;
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
 import br.com.rsinet.mobile.appium.pageFactory.PageAdvantage;
 import br.com.rsinet.mobile.appium.utility.Report;
-import io.appium.java_client.android.AndroidDriver;
+
 
 public class TesteTelaPrincipal {
 

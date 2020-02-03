@@ -20,7 +20,7 @@ public class DriverFactory {
 	private static AndroidDriver<MobileElement>driver;
 
 	public static AndroidDriver<MobileElement> InicializaDriver() throws MalformedURLException {
-		if (driver == null) {
+	if (driver == null) {
 		
 			 DesiredCapabilities capabilities = new DesiredCapabilities();
 			 capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -29,6 +29,8 @@ public class DriverFactory {
 			 capabilities.setCapability("platformName", "Android");
 			 capabilities.setCapability("appPackage", "com.Advantage.aShopping");
 			 capabilities.setCapability("appActivity", ".SplashActivity");
+			 capabilities.setCapability("unicodeKeyboard", true);   
+			 capabilities.setCapability("resetKeyboard", true);
 			 driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 			 driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 		}
@@ -37,8 +39,8 @@ public class DriverFactory {
 
 	public static void FechandoDriver(WebDriver driver) {
 
-		if ( null != driver)
-			driver.close();
+		if (driver != null)
+			driver.quit();
 	}
 
 
