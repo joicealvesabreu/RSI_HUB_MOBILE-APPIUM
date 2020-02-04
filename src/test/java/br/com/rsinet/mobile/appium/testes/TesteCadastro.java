@@ -52,6 +52,7 @@ public class TesteCadastro {
 		page.Login();
 		page.cadastrar();
 		page.Username();
+		page.Email();
 		page.Password();
 		page.Passwordconfirm();
 		page.Firstname();

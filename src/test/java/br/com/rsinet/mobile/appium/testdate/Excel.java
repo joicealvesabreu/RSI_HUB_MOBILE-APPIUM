@@ -6,7 +6,7 @@ import br.com.rsinet.mobile.appium.utility.ExcelUtils;
 public class Excel extends Constant{
 	
 		
-
+	
 		public  String sUsuario() throws Exception {
 		//	ExcelUtils.setExcelFile(
 			//	"./br.com.rsinet.mobile.appium.testdate/Dados.xlsx", "Planilha1");

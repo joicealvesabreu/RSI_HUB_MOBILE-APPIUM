@@ -19,7 +19,7 @@ import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class TesteTelaPrincipalNegativo {
+public class TesteTelaPrincipal {
 	
 	public AndroidDriver<MobileElement>driver;
 	public PageTelaincicial telaprincipal;

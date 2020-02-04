@@ -123,7 +123,7 @@ public class PageCadastro {
 
 	public void Username() throws Exception {
 		username.click();
-		username.sendKeys(excel.sUsuario());
+		username.sendKeys("JGANA19");
 	}
 
 	public void Email() throws InterruptedException {
