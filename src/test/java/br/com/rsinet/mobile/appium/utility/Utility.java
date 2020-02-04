@@ -14,16 +14,19 @@ public class Utility {
 	public static String getScreenshot(WebDriver driver) {
 
 		TakesScreenshot ts = (TakesScreenshot) driver;
-		File src=ts.getScreenshotAs(OutputType.FILE);
+		
+		File src = ts.getScreenshotAs(OutputType.FILE);
 
 		String path = System.getProperty("user.dir") + "/capturadetela/" + System.currentTimeMillis() + ".png";
 
 		File destination = new File(path);
+		
 		try {
 
 		FileUtils.copyFile(src , destination);
 		}
 		catch (IOException e) {
+			
 			System.out.println("Capture Falhou" + e.getMessage());
 		}
 		return path;

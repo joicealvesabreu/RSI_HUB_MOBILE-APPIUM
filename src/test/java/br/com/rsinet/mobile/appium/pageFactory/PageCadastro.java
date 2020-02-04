@@ -121,7 +121,7 @@ public class PageCadastro {
 
 	public void Username() {
 		username.click();
-		username.sendKeys("JGANA14");
+		username.sendKeys("JGANA15");
 	}
 
 	public void Email() throws InterruptedException {

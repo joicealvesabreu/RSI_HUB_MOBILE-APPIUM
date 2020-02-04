@@ -1,15 +1,21 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite">
+<suite name="Suite Testes Mobile AdvantageDemo">
 	<test name="Test">
 		<classes>
 
 			<class
-				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal" />
+				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipalPositivo" />
 			<class
-				name="br.com.rsinet.mobile.appium.testes.TesteBuscandoProduto" />
-				
-			<class name="br.com.rsinet.mobile.appium.testes.TestesCadastro" />
+				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipalNegativo" />
+			<class
+				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaPositivo" />
+			<class
+				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo" />
+			<class
+				name="br.com.rsinet.mobile.appium.testes.TesteCadastroPositivo" />
+			<class
+				name="br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo" />
 
 		</classes>
 	</test>

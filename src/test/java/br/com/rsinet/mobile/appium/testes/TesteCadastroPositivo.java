@@ -25,9 +25,9 @@ import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class TestesCadastro {
+public class TesteCadastroPositivo {
 
-	public AndroidDriver<MobileElement>driver;
+	public AndroidDriver<MobileElement> driver;
 	public PageCadastro page;
 	public ExtentReports extent;
 	public ExtentTest logger;
@@ -46,7 +46,7 @@ public class TestesCadastro {
 
 	@Test
 	public void cadastro1() throws InterruptedException, MalformedURLException, AWTException {
-	
+
 		logger = Report.setUp("Cadastro Válido");
 		page.Menu();
 		page.Login();
@@ -71,14 +71,12 @@ public class TestesCadastro {
 		Assert.assertTrue(asserts.contains("Advantage"), "Advantage");
 
 	}
-	
-
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws Exception {
 		Report.tearDown(result, logger, driver);
 		Report.closeReport(extent);
-		DriverFactory.FechandoDriver(driver);
-		}
+		driver = DriverFactory.FechandoDriver();
+	}
 
 }

@@ -2,7 +2,7 @@ package br.com.rsinet.mobile.appium.utility;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
+
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;

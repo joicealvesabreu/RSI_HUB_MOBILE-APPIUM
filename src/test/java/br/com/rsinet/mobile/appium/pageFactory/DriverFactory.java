@@ -21,26 +21,27 @@ public class DriverFactory {
 
 		if (driver == null) {
 
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-		capabilities.setCapability("deviceName", "JoiceAbreu");
-		capabilities.setCapability("platformVersion", "9");
-		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("appPackage", "com.Advantage.aShopping");
-		capabilities.setCapability("appActivity", ".SplashActivity");
-		capabilities.setCapability("unicodeKeyboard", true);
-		capabilities.setCapability("resetKeyboard", true);
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+			capabilities.setCapability("deviceName", "JoiceAbreu");
+			capabilities.setCapability("platformVersion", "9");
+			capabilities.setCapability("platformName", "Android");
+			capabilities.setCapability("appPackage", "com.Advantage.aShopping");
+			capabilities.setCapability("appActivity", ".SplashActivity");
+			capabilities.setCapability("unicodeKeyboard", true);
+			capabilities.setCapability("resetKeyboard", true);
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+			driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 		}
 		return driver;
 
 	}
 
-	public static void FechandoDriver(AndroidDriver<MobileElement> driver) {
-		if (driver != null)
+	public static AndroidDriver<MobileElement> FechandoDriver() {
+		if (driver != null) {
 			driver.quit();
-			driver = null;
+		}
+		return driver = null;
 	}
 
 }

@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68570" started-at="2020-02-04T16:16:50Z" finished-at="2020-02-04T16:17:59Z">
+  <suite name="Default suite" duration-ms="42377" started-at="2020-02-04T18:33:03Z" finished-at="2020-02-04T18:33:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68570" started-at="2020-02-04T16:16:50Z" finished-at="2020-02-04T16:17:59Z">
-      <class name="br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo">
-        <test-method status="PASS" signature="report()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo@55d56113]" name="report" is-config="true" duration-ms="143" started-at="2020-02-04T16:16:50Z" finished-at="2020-02-04T16:16:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- report -->
-        <test-method status="PASS" signature="before()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo@55d56113]" name="before" is-config="true" duration-ms="26716" started-at="2020-02-04T16:16:50Z" finished-at="2020-02-04T16:17:17Z">
+    <test name="Default test" duration-ms="42377" started-at="2020-02-04T18:33:03Z" finished-at="2020-02-04T18:33:46Z">
+      <class name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo">
+        <test-method status="PASS" signature="before()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo@64bf3bbf]" name="before" is-config="true" duration-ms="34969" started-at="2020-02-04T18:33:03Z" finished-at="2020-02-04T18:33:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="cadastro2()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo@55d56113]" name="cadastro2" duration-ms="35221" started-at="2020-02-04T16:17:17Z" finished-at="2020-02-04T16:17:52Z">
+        <test-method status="PASS" signature="report()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo@64bf3bbf]" name="report" is-config="true" duration-ms="212" started-at="2020-02-04T18:33:38Z" finished-at="2020-02-04T18:33:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cadastro2 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo@55d56113]" name="afterMethod" is-config="true" duration-ms="6471" started-at="2020-02-04T16:17:52Z" finished-at="2020-02-04T16:17:59Z">
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="teste()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo@64bf3bbf]" name="teste" duration-ms="3083" started-at="2020-02-04T18:33:39Z" finished-at="2020-02-04T18:33:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teste -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo@64bf3bbf]" name="after" is-config="true" duration-ms="4092" started-at="2020-02-04T18:33:42Z" finished-at="2020-02-04T18:33:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cadastro2 status=SUCCESS method=TesteCadastroNegativo.cadastro2()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo@55d56113] output={null}]]]>
+                <![CDATA[[TestResult name=teste status=SUCCESS method=TestePesquisaPorLupaNegativo.teste()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo@64bf3bbf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo -->
+        </test-method> <!-- after -->
+      </class> <!-- br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

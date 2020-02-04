@@ -80,7 +80,7 @@ public class TesteCadastroNegativo {
 	public void afterMethod(ITestResult result) throws Exception {
 		Report.tearDown(result, logger, driver);
 		Report.closeReport(extent);
-		DriverFactory.FechandoDriver(driver);
+		driver = DriverFactory.FechandoDriver();
 	}
 
 }

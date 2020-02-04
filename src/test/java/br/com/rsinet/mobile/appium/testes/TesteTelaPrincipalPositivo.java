@@ -13,6 +13,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.annotations.TestInstance;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -23,29 +24,23 @@ import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
+public class TesteTelaPrincipalPositivo {
 
-public class TesteTelaPrincipal {
-
-	public AndroidDriver<MobileElement>driver;
+	public AndroidDriver<MobileElement> driver;
 	public PageAdvantage telaprincipal;
 	public ExtentReports extent;
 	public ExtentTest logger;
 
-	@BeforeTest
-	public void report() {
-		extent = Report.setExtent();
-
-	}
-
 	@BeforeMethod
-	public void before() throws MalformedURLException, InterruptedException {
+	public void IniciaDriver() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
 		telaprincipal = PageFactory.initElements(driver, PageAdvantage.class);
+		extent = Report.setExtent();
 	}
 
 	@Test
-	public void teste1() {
-		logger = Report.setUp("pesquisaProdutoValidoTelaPrincipal");
+	public void teste() {
+		logger = Report.setUp("pesquisa Produto Valido Tela Principal");
 		telaprincipal.ClicarLaptop();
 		telaprincipal.EscolhendoLaptop();
 		telaprincipal.Adicionandooproduto();
@@ -54,20 +49,12 @@ public class TesteTelaPrincipal {
 				.getText();
 		Assert.assertTrue(chegounologin.contains("Login"), "Login");
 	}
-	@Test
-	public void teste2() {
-		logger = Report.setUp("pesquisaProdutoValidoTelaPrincipal12");
-		telaprincipal.ClicarLaptop();
-		telaprincipal.EscolhendoLaptop();
-		telaprincipal.Adicionandooproduto();
-		System.out.println("Cheguei Aqui");
-	}
 
 	@AfterMethod
-	public void afterMethod(ITestResult result) throws Exception {
+	public void Finaliza(ITestResult result) throws Exception {
 		Report.tearDown(result, logger, driver);
 		Report.closeReport(extent);
-		DriverFactory.FechandoDriver(driver);
-		}
+		driver = DriverFactory.FechandoDriver();
+	}
 
 }
