@@ -6,7 +6,7 @@ public class Constant {
 
 	public static final String ProdutoPesquisado = "HP ZBOOK 17 G2 MOBILE WORKSTATION";
 	
-	public static final String Path_TestData = "br.com.rsinet.mobile.appium/testdate";
+	public static final String Path_TestData = "C:\\Users\\joice.abreu\\Desktop\\Documents\\br.com.AppiumMobile\\target\\";
 
 	public static final String File_TestData = "Dados.xlsx";
 

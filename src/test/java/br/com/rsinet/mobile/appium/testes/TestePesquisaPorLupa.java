@@ -15,8 +15,12 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
 import br.com.rsinet.mobile.appium.pageFactory.PagePesquisaPorLupa;
+import br.com.rsinet.mobile.appium.testdate.Excel;
+import br.com.rsinet.mobile.appium.utility.Constant;
+import br.com.rsinet.mobile.appium.utility.ExcelUtils;
 import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -26,18 +30,20 @@ public class TestePesquisaPorLupa {
 	public AndroidDriver<MobileElement> driver;
 	public PagePesquisaPorLupa pesquisa;
 	public ExtentReports extent;
-	public ExtentTest logger;;
+	public ExtentTest logger;
+	
 
 	@BeforeTest
 	public void report() {
 		extent = Report.setExtent();
-
+	
 	}
 
 	@BeforeMethod
-	public void before() throws MalformedURLException, InterruptedException {
+	public void before() throws MalformedURLException {
 		driver = DriverFactory.InicializaDriver();
 		pesquisa = PageFactory.initElements(driver, PagePesquisaPorLupa.class);
+		
 	}
 
 	@Test
@@ -51,10 +57,10 @@ public class TestePesquisaPorLupa {
 		Assert.assertTrue(naoExisteesseproduto);
 		System.out.println(naoExisteesseproduto);
 
-	}
+	} 
 	
 	@Test
-	public void pesquisa2Produto_valido() { 
+	public void pesquisa2Produto_valido() throws Throwable { 
 		logger = Report.setUp("pesquisa2Produto_valido");
 		pesquisa.Search();
 		pesquisa.Lupa();

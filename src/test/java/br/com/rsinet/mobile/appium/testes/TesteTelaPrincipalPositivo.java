@@ -19,7 +19,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
-import br.com.rsinet.mobile.appium.pageFactory.PageAdvantage;
+import br.com.rsinet.mobile.appium.pageFactory.PageTelaincicial;
 import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -27,14 +27,14 @@ import io.appium.java_client.android.AndroidDriver;
 public class TesteTelaPrincipalPositivo {
 
 	public AndroidDriver<MobileElement> driver;
-	public PageAdvantage telaprincipal;
+	public PageTelaincicial telaprincipal;
 	public ExtentReports extent;
 	public ExtentTest logger;
 
 	@BeforeMethod
 	public void IniciaDriver() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
-		telaprincipal = PageFactory.initElements(driver, PageAdvantage.class);
+		telaprincipal = PageFactory.initElements(driver, PageTelaincicial.class);
 		extent = Report.setExtent();
 	}
 

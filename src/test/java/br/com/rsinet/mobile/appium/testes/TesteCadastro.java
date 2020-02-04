@@ -45,7 +45,7 @@ public class TesteCadastro {
 	}
 
 	@Test
-	public void cadastro1() throws InterruptedException, MalformedURLException, AWTException {
+	public void cadastro1() throws Exception {
 
 		logger = Report.setUp("Cadastro Válido");
 		page.Menu();
@@ -73,7 +73,7 @@ public class TesteCadastro {
 	}
 
 	@Test
-	public void cadastro() throws InterruptedException, MalformedURLException, AWTException {
+	public void cadastro() throws Exception {
 
 		logger = Report.setUp("Cadastro Inválido");
 		page.Menu();

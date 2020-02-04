@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.rsinet.mobile.appium.testdate.Excel;
 import io.appium.java_client.touch.offset.PointOption;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -27,8 +28,9 @@ public class PageCadastro {
 
 	private WebDriver driver;
 	private WebElement element;
+	private Excel excel = new Excel();
 
-	public void PageCadastro(WebDriver driver) {
+	public void PageCadastro (WebDriver driver) {
 				PageFactory.initElements(driver, this);
 	}
 
@@ -119,9 +121,9 @@ public class PageCadastro {
 		cadastrar.click();
 	}
 
-	public void Username() {
+	public void Username() throws Exception {
 		username.click();
-		username.sendKeys("JGANA18");
+		username.sendKeys(excel.sUsuario());
 	}
 
 	public void Email() throws InterruptedException {

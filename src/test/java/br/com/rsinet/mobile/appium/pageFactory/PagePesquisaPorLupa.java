@@ -8,16 +8,21 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import br.com.rsinet.mobile.appium.testdate.Excel;
+
 public class PagePesquisaPorLupa {
 	private WebDriver driver;
 	private WebElement element;
+	private Excel excel;
+
 
 	public void PagePesquisaPorMassa(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how= How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText")
+//	@FindBy(how= How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText")
+	@FindBy(how= How.ID, using ="com.Advantage.aShopping:id/editTextSearch")
 	private WebElement search;
 	
 	@FindBy(how= How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView")
@@ -29,7 +34,7 @@ public class PagePesquisaPorLupa {
 	@FindBy(how = How.XPATH, using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button")
 	private WebElement adicionandocarinho;
 	
-	public void Search() {
+	public void Search() throws Throwable {
 		search.sendKeys("HP CHROMEBOOK 14");
 	}
 	public void Lupa() {

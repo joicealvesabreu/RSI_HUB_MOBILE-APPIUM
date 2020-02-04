@@ -3,15 +3,15 @@ package br.com.rsinet.mobile.appium.testdate;
 import br.com.rsinet.mobile.appium.utility.Constant;
 import br.com.rsinet.mobile.appium.utility.ExcelUtils;
 
-public class Excel {
+public class Excel extends Constant{
 	
 		
 
 		public  String sUsuario() throws Exception {
-			ExcelUtils.setExcelFile(
-				"./br.com.rsinet.mobile.appium.testdate/Dados.xsml", "Planilha1");
-			//ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Planilha1");
-			String sUsuario = ExcelUtils.getCellData(11, 0);
+		//	ExcelUtils.setExcelFile(
+			//	"./br.com.rsinet.mobile.appium.testdate/Dados.xlsx", "Planilha1");
+			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData, "Planilha1");
+			String sUsuario = ExcelUtils.getCellData(16, 0);
 			return sUsuario;
 		}
 
@@ -70,7 +70,7 @@ public class Excel {
 			return sCep;
 		}
 		
-		public String sLaptop() throws Exception {
+		public static String sLaptop() throws Exception {
 			String sLaptop =ExcelUtils.getCellData(1, 11);
 			return sLaptop;
 		}
