@@ -5,9 +5,10 @@
     <classes>
       <class name="br.com.rsinet.mobile.appium.testes.TestesCadastro">
         <methods>
+          <include name="cadastro2"/>
           <include name="before"/>
           <include name="afterMethod"/>
-          <include name="cadastrovalido"/>
+          <include name="cadastro1"/>
           <include name="report"/>
         </methods>
       </class> <!-- br.com.rsinet.mobile.appium.testes.TestesCadastro -->

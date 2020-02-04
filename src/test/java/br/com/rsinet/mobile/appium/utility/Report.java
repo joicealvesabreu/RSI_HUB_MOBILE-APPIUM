@@ -11,14 +11,17 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
 
 
 public class Report {
 
-	public static WebDriver driver;
+	
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
-	public static ExtentTest logger;;
+	public static ExtentTest logger;
 	
 	public static ExtentReports setExtent() {
 
@@ -46,7 +49,7 @@ public class Report {
 	}
 
 	/* Verifica se o teste passou, falhou ou pulou e tira screenshot */
-	public static void tearDown(ITestResult result, ExtentTest test, WebDriver driver) throws IOException {
+	public static void tearDown(ITestResult result, ExtentTest test, AndroidDriver<MobileElement> driver) throws IOException {
 		String screenshotPath = Utility.getScreenshot(driver);
 		if (result.getStatus() == ITestResult.FAILURE) {
 			test.log(Status.FAIL, "TEST CASE FAILED IS " + result.getName()); 

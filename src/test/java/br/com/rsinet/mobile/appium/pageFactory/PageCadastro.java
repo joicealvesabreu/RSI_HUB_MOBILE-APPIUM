@@ -96,7 +96,8 @@ public class PageCadastro {
 		(new TouchAction(DriverFactory.InicializaDriver())).tap(PointOption.point(989, 1701)).perform();
 	}
 	
-	public void rolartela()throws MalformedURLException {
+	public void rolartela()throws MalformedURLException, InterruptedException {
+		Thread.sleep(5000);
 		(new TouchAction(DriverFactory.InicializaDriver())).press(PointOption.point(458, 1353)).moveTo(PointOption.point(542, 412)).release().perform();
 				  		  
 	}
@@ -120,7 +121,7 @@ public class PageCadastro {
 
 	public void Username() {
 		username.click();
-		username.sendKeys("JGANA6");
+		username.sendKeys("JGANA14");
 	}
 
 	public void Email() throws InterruptedException {

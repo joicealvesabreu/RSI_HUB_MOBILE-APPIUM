@@ -23,10 +23,11 @@ import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
 import br.com.rsinet.mobile.appium.pageFactory.PagePesquisaPorMassa;
 
 import br.com.rsinet.mobile.appium.utility.Report;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class TesteBuscandoProduto {
-	public WebDriver driver ;
+	public AndroidDriver<MobileElement>driver;
 	public PagePesquisaPorMassa pesquisa;
 	public ExtentReports extent;
 	public ExtentTest logger;

@@ -20,11 +20,13 @@ import com.aventstack.extentreports.ExtentTest;
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
 import br.com.rsinet.mobile.appium.pageFactory.PageAdvantage;
 import br.com.rsinet.mobile.appium.utility.Report;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 
 
 public class TesteTelaPrincipal {
 
-	public WebDriver driver = null;
+	public AndroidDriver<MobileElement>driver;
 	public PageAdvantage telaprincipal;
 	public ExtentReports extent;
 	public ExtentTest logger;
@@ -51,6 +53,14 @@ public class TesteTelaPrincipal {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView"))
 				.getText();
 		Assert.assertTrue(chegounologin.contains("Login"), "Login");
+	}
+	@Test
+	public void teste2() {
+		logger = Report.setUp("pesquisaProdutoValidoTelaPrincipal12");
+		telaprincipal.ClicarLaptop();
+		telaprincipal.EscolhendoLaptop();
+		telaprincipal.Adicionandooproduto();
+		System.out.println("Cheguei Aqui");
 	}
 
 	@AfterMethod
