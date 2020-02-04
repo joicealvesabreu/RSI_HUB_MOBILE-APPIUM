@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.mobile.appium.testes.TesteCadastroPositivo">
+      <class name="br.com.rsinet.mobile.appium.testes.TesteCadastro">
         <methods>
           <include name="before"/>
+          <include name="cadastro"/>
           <include name="cadastro1"/>
-          <include name="report"/>
           <include name="afterMethod"/>
-        </methods>
-      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastroPositivo -->
-      <class name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaPositivo">
-        <methods>
           <include name="report"/>
-          <include name="teste1"/>
-          <include name="after"/>
-          <include name="before"/>
         </methods>
-      </class> <!-- br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaPositivo -->
-      <class name="br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo">
-        <methods>
-          <include name="report"/>
-          <include name="before"/>
-          <include name="cadastro2"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo -->
+      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastro -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

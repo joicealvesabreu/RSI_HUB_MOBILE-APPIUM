@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class PagePesquisaPorMassa {
+public class PagePesquisaPorLupa {
 	private WebDriver driver;
 	private WebElement element;
 

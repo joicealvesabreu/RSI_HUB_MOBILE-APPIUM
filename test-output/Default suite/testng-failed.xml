@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipalNegativo">
+      <class name="br.com.rsinet.mobile.appium.testes.TesteCadastro">
         <methods>
-          <include name="iniciaReport"/>
-          <include name="teste"/>
-          <include name="IniciaDriver"/>
-          <include name="Finaliza"/>
+          <include name="before"/>
+          <include name="cadastro"/>
+          <include name="cadastro1"/>
+          <include name="afterMethod"/>
+          <include name="report"/>
         </methods>
-      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteTelaPrincipalNegativo -->
+      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastro -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

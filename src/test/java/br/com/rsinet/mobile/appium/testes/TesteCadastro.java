@@ -25,7 +25,7 @@ import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class TesteCadastroPositivo {
+public class TesteCadastro {
 
 	public AndroidDriver<MobileElement> driver;
 	public PageCadastro page;
@@ -64,12 +64,39 @@ public class TesteCadastroPositivo {
 		page.City();
 		page.Zip();
 		page.rolartela1();
-
 		page.Register();
+		page.Esperar();
+		String asserts = driver.findElement(By.id("com.Advantage.aShopping:id/buttonRegister")).getText();
+		Assert.assertTrue(asserts.contains("REGISTER"), "REGISTER");
+		
 
+	}
+
+	@Test
+	public void cadastro() throws InterruptedException, MalformedURLException, AWTException {
+
+		logger = Report.setUp("Cadastro Inválido");
+		page.Menu();
+		page.Login();
+		page.cadastrar();
+		page.Username();
+		page.Email();
+		page.Password();
+		page.Passwordconfirm();
+		page.Firstname();
+		page.Lastname();
+		page.Phonenumber();
+		page.rolartela();
+		page.Country();
+		page.State();
+		page.Address();
+		page.City();
+		page.Zip();
+		page.rolartela1();
+		page.Register();
+		page.Esperar();
 		String asserts = driver.findElement(By.id("com.Advantage.aShopping:id/textViewAdvantage")).getText();
 		Assert.assertTrue(asserts.contains("Advantage"), "Advantage");
-
 	}
 
 	@AfterMethod

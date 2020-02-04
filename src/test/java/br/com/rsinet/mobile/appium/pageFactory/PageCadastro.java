@@ -121,7 +121,7 @@ public class PageCadastro {
 
 	public void Username() {
 		username.click();
-		username.sendKeys("JGANA15");
+		username.sendKeys("JGANA18");
 	}
 
 	public void Email() throws InterruptedException {
@@ -195,8 +195,8 @@ public class PageCadastro {
 	public void Register() {
 		register.click();
 	}
-	public void Menuverificacao() {
-		menuverificacao.click();
+	public void Esperar() throws InterruptedException {
+		Thread.sleep(5000);
 	}
 	
 }

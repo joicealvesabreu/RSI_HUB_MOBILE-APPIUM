@@ -5,17 +5,12 @@
 		<classes>
 
 			<class
-				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipalPositivo" />
+				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal" />
+			<
 			<class
-				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipalNegativo" />
-			<class
-				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaPositivo" />
-			<class
-				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaNegativo" />
-			<class
-				name="br.com.rsinet.mobile.appium.testes.TesteCadastroPositivo" />
-			<class
-				name="br.com.rsinet.mobile.appium.testes.TesteCadastroNegativo" />
+				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaP" />
+
+			<class name="br.com.rsinet.mobile.appium.testes.TesteCadastro" />
 
 		</classes>
 	</test>
