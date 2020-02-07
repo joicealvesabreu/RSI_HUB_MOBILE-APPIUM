@@ -2,54 +2,58 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="167680" started-at="2020-02-04T21:00:26Z" finished-at="2020-02-04T21:03:14Z">
+  <suite name="Default suite" duration-ms="75114" started-at="2020-02-07T18:39:54Z" finished-at="2020-02-07T18:41:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="167680" started-at="2020-02-04T21:00:26Z" finished-at="2020-02-04T21:03:14Z">
-      <class name="br.com.rsinet.mobile.appium.testes.TesteCadastro">
-        <test-method status="PASS" signature="report()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113]" name="report" is-config="true" duration-ms="144" started-at="2020-02-04T21:00:26Z" finished-at="2020-02-04T21:00:26Z">
+    <test name="Default test" duration-ms="75114" started-at="2020-02-07T18:39:54Z" finished-at="2020-02-07T18:41:09Z">
+      <class name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal">
+        <test-method status="PASS" signature="iniciaReport()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="iniciaReport" is-config="true" duration-ms="164" started-at="2020-02-07T18:39:54Z" finished-at="2020-02-07T18:39:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- report -->
-        <test-method status="PASS" signature="before()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113]" name="before" is-config="true" duration-ms="59756" started-at="2020-02-04T21:00:26Z" finished-at="2020-02-04T21:01:26Z">
+        </test-method> <!-- iniciaReport -->
+        <test-method status="PASS" signature="IniciaDriver()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="IniciaDriver" is-config="true" duration-ms="21886" started-at="2020-02-07T18:39:54Z" finished-at="2020-02-07T18:40:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- before -->
-        <test-method status="PASS" signature="cadastro()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113]" name="cadastro" duration-ms="37976" started-at="2020-02-04T21:01:26Z" finished-at="2020-02-04T21:02:04Z">
+        </test-method> <!-- IniciaDriver -->
+        <test-method status="PASS" signature="pesquisa1ProdutoValidoTelaPrincipal()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="pesquisa1ProdutoValidoTelaPrincipal" duration-ms="6529" started-at="2020-02-07T18:40:16Z" finished-at="2020-02-07T18:40:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cadastro -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113]" name="afterMethod" is-config="true" duration-ms="5234" started-at="2020-02-04T21:02:04Z" finished-at="2020-02-04T21:02:09Z">
+        </test-method> <!-- pesquisa1ProdutoValidoTelaPrincipal -->
+        <test-method status="PASS" signature="Finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="Finaliza" is-config="true" duration-ms="4157" started-at="2020-02-07T18:40:22Z" finished-at="2020-02-07T18:40:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cadastro status=SUCCESS method=TesteCadastro.cadastro()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113] output={null}]]]>
+                <![CDATA[[TestResult name=pesquisa1ProdutoValidoTelaPrincipal status=SUCCESS method=TesteTelaPrincipal.pesquisa1ProdutoValidoTelaPrincipal()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="before()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113]" name="before" is-config="true" duration-ms="25208" started-at="2020-02-04T21:02:09Z" finished-at="2020-02-04T21:02:35Z">
+        </test-method> <!-- Finaliza -->
+        <test-method status="PASS" signature="IniciaDriver()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="IniciaDriver" is-config="true" duration-ms="23066" started-at="2020-02-07T18:40:26Z" finished-at="2020-02-07T18:40:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- before -->
-        <test-method status="PASS" signature="cadastro1()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113]" name="cadastro1" duration-ms="37007" started-at="2020-02-04T21:02:35Z" finished-at="2020-02-04T21:03:12Z">
+        </test-method> <!-- IniciaDriver -->
+        <test-method status="PASS" signature="pesquisa2Produtocom45itensnocarinho()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="pesquisa2Produtocom45itensnocarinho" duration-ms="13573" started-at="2020-02-07T18:40:49Z" finished-at="2020-02-07T18:41:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cadastro1 -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113]" name="afterMethod" is-config="true" duration-ms="2337" started-at="2020-02-04T21:03:12Z" finished-at="2020-02-04T21:03:14Z">
+        </test-method> <!-- pesquisa2Produtocom45itensnocarinho -->
+        <test-method status="PASS" signature="Finaliza(org.testng.ITestResult)[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="Finaliza" is-config="true" duration-ms="5670" started-at="2020-02-07T18:41:03Z" finished-at="2020-02-07T18:41:09Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=cadastro1 status=SUCCESS method=TesteCadastro.cadastro1()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteCadastro@55d56113] output={null}]]]>
+                <![CDATA[[TestResult name=pesquisa2Produtocom45itensnocarinho status=SUCCESS method=TesteTelaPrincipal.pesquisa2Produtocom45itensnocarinho()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastro -->
+        </test-method> <!-- Finaliza -->
+        <test-method status="PASS" signature="finalizareport()[pri:0, instance:br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal@64bf3bbf]" name="finalizareport" is-config="true" duration-ms="49" started-at="2020-02-07T18:41:09Z" finished-at="2020-02-07T18:41:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizareport -->
+      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

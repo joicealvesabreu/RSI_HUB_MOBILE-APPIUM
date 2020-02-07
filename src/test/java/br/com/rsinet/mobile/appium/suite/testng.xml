@@ -6,9 +6,9 @@
 
 			<class
 				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal" />
-			<
+			
 			<class
-				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupaP" />
+				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupa" />
 
 			<class name="br.com.rsinet.mobile.appium.testes.TesteCadastro" />
 

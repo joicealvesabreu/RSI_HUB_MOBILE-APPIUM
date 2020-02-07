@@ -123,7 +123,7 @@ public class PageCadastro {
 
 	public void Username() throws Exception {
 		username.click();
-		username.sendKeys("JGANA19");
+		username.sendKeys("JGANA456");
 	}
 
 	public void Email() throws InterruptedException {
