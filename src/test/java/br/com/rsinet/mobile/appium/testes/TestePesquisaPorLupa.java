@@ -47,7 +47,7 @@ public class TestePesquisaPorLupa {
 
 	@Test
 	public void pesquisa1Produto_Invalido() {
-		logger = Report.setUp("pesquisa1Produto_Invalido");
+		logger = Report.setUp("pesquisa1_Produto_Invalido");
 		pesquisa.search().sendKeys("celular");
 		pesquisa.lupa().click();
 
@@ -60,16 +60,18 @@ public class TestePesquisaPorLupa {
 	
 	@Test
 	public void pesquisa2Produto_valido() throws Throwable { 
-		logger = Report.setUp("pesquisa2Produto_valido");
-		pesquisa.search().sendKeys("HP CHROMEBOOK 14");
+		logger = Report.setUp("pesquisa2_Produto_valido");
+		pesquisa.search().sendKeys("HP CHROMEBOOK 14 G1(ES)");
 		pesquisa.lupa().click();
-		Assert.assertTrue(driver.getPageSource().contains("HP CHROMEBOOK 14"));
 		pesquisa.escolhendolaptop().click();
 		pesquisa.adicionandocarinho().click();
-		String chegounologin = driver.findElement(By.xpath(
-				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView"))
-				.getText();
-		Assert.assertTrue(chegounologin.contains("Login"), "Login");
+		pesquisa.usernamelogin().sendKeys("JGANA234");
+		pesquisa.passwordlogin().sendKeys("Natalice24");
+		pesquisa.login().click();
+		pesquisa.imageviewcart().click();
+		String nomeproduto = pesquisa.nomeProduroConfirmar().getText();
+		Assert.assertTrue(nomeproduto.contains("HP Chromebook 14 G1(ES)"), "HP Chromebook 14 G1(ES)");
+		
  
 	}	
 

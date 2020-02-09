@@ -17,7 +17,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
 
-import br.com.rsinet.mobile.appium.pageFactory.ScreenObject;
+import br.com.rsinet.mobile.appium.pageFactory.ScreenTelaInicial;
 import br.com.rsinet.mobile.appium.testdate.Excel;
 
 import br.com.rsinet.mobile.appium.utility.Report;
@@ -27,14 +27,14 @@ import io.appium.java_client.android.AndroidDriver;
 public class TesteTelaPrincipal {
 
 	public static AndroidDriver<MobileElement> driver;
-	public ScreenObject telaprincipal;
+	public ScreenTelaInicial telaprincipal;
 	public ExtentReports extent;
 	public ExtentTest logger;
 
 	@BeforeMethod
 	public void IniciaDriver() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
-		telaprincipal = new ScreenObject(DriverFactory.InicializaDriver());
+		telaprincipal = new ScreenTelaInicial(DriverFactory.InicializaDriver());
 		// excel = new Excel();
 
 	}

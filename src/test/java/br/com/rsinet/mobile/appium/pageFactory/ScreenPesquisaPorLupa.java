@@ -23,21 +23,21 @@ public class ScreenPesquisaPorLupa {
 	
 	public MobileElement search () {
 
-		MobileElement search = driver.findElement(By.xpath(
+		MobileElement search = driver.findElement(By.id(
 				"com.Advantage.aShopping:id/editTextSearch"));
 			
 		return search;
 	}
 	public MobileElement lupa () {
 
-		MobileElement lupa = driver.findElement(By.xpath(
-				"//android.view.ViewGroup[@content-desc=\\\"Home Page\\\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView"));
+		MobileElement lupa = driver.findElement(By.id(
+				"com.Advantage.aShopping:id/imageViewSearch"));
 		return lupa;
 	}
 	public MobileElement escolhendolaptop () {
 
 		MobileElement escolhendolaptop = driver.findElement(By.xpath(
-				"//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]/android.widget.TextView[1]"));
+				"//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[1]/android.widget.TextView[1]"));
 		return escolhendolaptop;
 	}
 	public MobileElement adicionandocarinho () {
@@ -46,7 +46,29 @@ public class ScreenPesquisaPorLupa {
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button"));
 				return adicionandocarinho;
 	}
+	public MobileElement usernamelogin() {
+		MobileElement usernamelogin = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[3]/android.widget.EditText"));
+				return usernamelogin;
+	}
+
+	public MobileElement passwordlogin() {
+		MobileElement passwordlogin = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout[4]/android.widget.EditText"));
+				return passwordlogin;
+	}
+
+	public MobileElement login() {
+		MobileElement login = driver.findElement(By.id("com.Advantage.aShopping:id/buttonLogin"));
+				return login;
+	}
+	public MobileElement imageviewcart() {
+		MobileElement imageviewcart = driver.findElement(By.id("com.Advantage.aShopping:id/imageViewCart"));
+				return imageviewcart;
+	}
+
 
 	
-
+	public MobileElement nomeProduroConfirmar() {
+		MobileElement nomeProduroConfirmar = driver.findElement(By.id("com.Advantage.aShopping:id/textViewCartProductName"));
+		return  nomeProduroConfirmar;
+	}
 }
