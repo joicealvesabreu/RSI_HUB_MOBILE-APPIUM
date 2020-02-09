@@ -9,7 +9,6 @@
           <include name="cadastro1Valido"/>
           <include name="finalizareport"/>
           <include name="afterMethod"/>
-          <include name="cadastro2Invalido"/>
           <include name="report"/>
         </methods>
       </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastro -->
