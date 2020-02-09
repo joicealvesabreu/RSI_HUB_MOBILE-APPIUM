@@ -15,9 +15,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
-
-import br.com.rsinet.mobile.appium.pageFactory.ScreenTelaInicial;
+import br.com.rsinet.mobile.appium.screenfactory.DriverFactory;
+import br.com.rsinet.mobile.appium.screenfactory.ScreenTelaInicial;
 import br.com.rsinet.mobile.appium.testdate.Excel;
 
 import br.com.rsinet.mobile.appium.utility.Report;

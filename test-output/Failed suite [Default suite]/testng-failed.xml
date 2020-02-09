@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Default suite]]">
+  <test thread-count="5" name="Default test(failed)(failed)">
+    <classes>
+      <class name="br.com.rsinet.mobile.appium.testes.TesteCadastro">
+        <methods>
+          <include name="before"/>
+          <include name="cadastro1Valido"/>
+          <include name="finalizareport"/>
+          <include name="afterMethod"/>
+          <include name="report"/>
+        </methods>
+      </class> <!-- br.com.rsinet.mobile.appium.testes.TesteCadastro -->
+    </classes>
+  </test> <!-- Default test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Default suite]] -->

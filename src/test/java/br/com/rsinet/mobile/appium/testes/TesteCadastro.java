@@ -20,8 +20,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
-import br.com.rsinet.mobile.appium.pageFactory.ScreenCadastro;
+import br.com.rsinet.mobile.appium.screenfactory.DriverFactory;
+import br.com.rsinet.mobile.appium.screenfactory.ScreenCadastro;
 import br.com.rsinet.mobile.appium.testdate.Excel;
 import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
@@ -33,19 +33,19 @@ public class TesteCadastro {
 	private ScreenCadastro page;
 	private ExtentReports extent;
 	private ExtentTest logger;
-	private Excel excel;
-
-	@BeforeTest
-	public void report() {
-		extent = Report.setExtent();
-	}
+//	private Excel excel;
 
 	@BeforeMethod
 	public void before() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
 		page = new ScreenCadastro(DriverFactory.InicializaDriver());
-		excel = new Excel();
+		// excel = new Excel();
 
+	}
+
+	@BeforeTest
+	public void report() {
+		extent = Report.setExtent();
 	}
 
 	@Test
@@ -55,7 +55,7 @@ public class TesteCadastro {
 		page.menu().click();
 		page.login().click();
 		page.cadastrar().click();
-		page.username().sendKeys("JGANA281");
+		page.username().sendKeys("JGANA285");
 		page.email().sendKeys("joice@bbd.com");
 		page.password().sendKeys("Natalice24");
 		page.passwordcomfirm().sendKeys("Natalice24");
@@ -71,9 +71,9 @@ public class TesteCadastro {
 		page.zip().sendKeys("02220-050");
 		page.rolartela1();
 		page.register().click();
-		page.menu().click();
+		page.menuverificacao().click();
 		String asserts = page.menuuser().getText();
-		Assert.assertTrue(asserts.contains("JGANA281"));
+		Assert.assertTrue(asserts.contains("JGANA285"));
 
 	}
 
@@ -103,19 +103,6 @@ public class TesteCadastro {
 		String asserts1 = page.verificamsgderror().getText();
 		Assert.assertTrue(asserts1.contains("REGISTER"));
 	}
-
-	@AfterMethod
-	public void afterMethod(ITestResult result) throws Exception {
-		Report.tearDown(result, logger, driver);
-		Report.closeReport(extent);
-		driver = DriverFactory.FechandoDriver();
-	}
-
-	@AfterTest
-	public void finalizareport() {
-		extent.flush();
-	}
-
 	/*
 	 * page.username().sendKeys(excel.sUsuario());
 	 * page.email().sendKeys(excel.sEmail());
@@ -132,4 +119,17 @@ public class TesteCadastro {
 	 * driver.findElement(By.id("com.Advantage.aShopping:id/buttonRegister")).
 	 * getText(); Assert.assertTrue(asserts1.contains("REGISTER"), "REGISTER"); }
 	 */
+
+	@AfterMethod
+	public void afterMethod(ITestResult result) throws Exception {
+		Report.tearDown(result, logger, driver);
+		Report.closeReport(extent);
+		driver = DriverFactory.FechandoDriver();
+	}
+
+	@AfterTest
+	public void finalizareport() {
+		extent.flush();
+	}
+
 }
