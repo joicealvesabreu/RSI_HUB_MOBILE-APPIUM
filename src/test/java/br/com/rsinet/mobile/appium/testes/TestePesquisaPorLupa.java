@@ -1,10 +1,10 @@
 package br.com.rsinet.mobile.appium.testes;
 
-import java.io.IOException;
+
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.PageFactory;
+
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -18,40 +18,38 @@ import com.aventstack.extentreports.ExtentTest;
 
 
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
-import br.com.rsinet.mobile.appium.pageFactory.PagePesquisaPorLupa;
-import br.com.rsinet.mobile.appium.testdate.Excel;
-import br.com.rsinet.mobile.appium.utility.Constant;
-import br.com.rsinet.mobile.appium.utility.ExcelUtils;
+import br.com.rsinet.mobile.appium.pageFactory.ScreenPesquisaPorLupa;
+
 import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class TestePesquisaPorLupa {
 
-	public AndroidDriver<MobileElement> driver;
-	public PagePesquisaPorLupa pesquisa;
-	public ExtentReports extent;
-	public ExtentTest logger;
+	private static AndroidDriver<MobileElement> driver;
+	private ScreenPesquisaPorLupa pesquisa;
+	private ExtentReports extent;
+	private ExtentTest logger;
 	
 
+
+	@BeforeMethod
+	public void before() throws MalformedURLException, InterruptedException {
+		driver = DriverFactory.InicializaDriver();
+		pesquisa = new ScreenPesquisaPorLupa(DriverFactory.InicializaDriver());
+		
+	}
 	@BeforeTest
 	public void report() {
 		extent = Report.setExtent();
-	
 	}
 
-	@BeforeMethod
-	public void before() throws MalformedURLException {
-		driver = DriverFactory.InicializaDriver();
-		pesquisa = PageFactory.initElements(driver, PagePesquisaPorLupa.class);
-		
-	}
 
 	@Test
 	public void pesquisa1Produto_Invalido() {
 		logger = Report.setUp("pesquisa1Produto_Invalido");
-		pesquisa.SearchFalse();
-		pesquisa.Lupa();
+		pesquisa.search().sendKeys("celular");
+		pesquisa.lupa().click();
 
 		boolean naoExisteesseproduto = driver.findElement(By.id("com.Advantage.aShopping:id/textViewNoProductsToShow"))
 				.isDisplayed();
@@ -63,10 +61,11 @@ public class TestePesquisaPorLupa {
 	@Test
 	public void pesquisa2Produto_valido() throws Throwable { 
 		logger = Report.setUp("pesquisa2Produto_valido");
-		pesquisa.Search();
-		pesquisa.Lupa();
-		pesquisa.Produto();
-		pesquisa.Carinho();
+		pesquisa.search().sendKeys("HP CHROMEBOOK 14");
+		pesquisa.lupa().click();
+		Assert.assertTrue(driver.getPageSource().contains("HP CHROMEBOOK 14"));
+		pesquisa.escolhendolaptop().click();
+		pesquisa.adicionandocarinho().click();
 		String chegounologin = driver.findElement(By.xpath(
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView"))
 				.getText();
@@ -83,5 +82,9 @@ public class TestePesquisaPorLupa {
 	Report.closeReport(extent);
 	driver = DriverFactory.FechandoDriver();
 	}
-
+	
+	@AfterTest
+	public void finalizareport() {
+		extent.flush();
+	}
 }

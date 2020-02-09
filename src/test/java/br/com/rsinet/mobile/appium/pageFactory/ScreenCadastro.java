@@ -24,7 +24,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 
 
-public class PageCadastro {
+public class ScreenCadastro {
 
 	private WebDriver driver;
 	private WebElement element;

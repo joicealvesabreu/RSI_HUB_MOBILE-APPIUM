@@ -8,7 +8,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class ScreenObject {
 
 	
-	public AndroidDriver<MobileElement> driver;
+	private AndroidDriver<MobileElement> driver;
 
 	public ScreenObject(AndroidDriver<MobileElement> driver) {
 		this.driver = driver;

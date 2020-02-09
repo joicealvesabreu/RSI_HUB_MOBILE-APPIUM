@@ -21,7 +21,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.mobile.appium.pageFactory.DriverFactory;
-import br.com.rsinet.mobile.appium.pageFactory.PageCadastro;
+import br.com.rsinet.mobile.appium.pageFactory.ScreenCadastro;
 import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -29,7 +29,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class TesteCadastro {
 
 	public AndroidDriver<MobileElement> driver;
-	public PageCadastro page;
+	public ScreenCadastro page;
 	public ExtentReports extent;
 	public ExtentTest logger;
 
@@ -41,7 +41,7 @@ public class TesteCadastro {
 	@BeforeMethod
 	public void before() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
-		page = PageFactory.initElements(driver, PageCadastro.class);
+		page = PageFactory.initElements(driver, ScreenCadastro.class);
 
 	}
 

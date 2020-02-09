@@ -9,49 +9,44 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import br.com.rsinet.mobile.appium.testdate.Excel;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 
-public class PagePesquisaPorLupa {
-	private WebDriver driver;
-	private WebElement element;
-	private Excel excel;
+public class ScreenPesquisaPorLupa {
+	
+	private   AndroidDriver<MobileElement> driver;
 
 
-	public void PagePesquisaPorMassa(WebDriver driver) {
+	public  ScreenPesquisaPorLupa(AndroidDriver<MobileElement> driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
 	}
 	
-//	@FindBy(how= How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.EditText")
-	@FindBy(how= How.ID, using ="com.Advantage.aShopping:id/editTextSearch")
-	private WebElement search;
-	
-	@FindBy(how= How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView")
-	private WebElement lupa;
-	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]/android.widget.TextView[1]")
-	private WebElement escolhendolaptop;
-	
-	@FindBy(how = How.XPATH, using = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button")
-	private WebElement adicionandocarinho;
-	
-	public void Search() throws Throwable {
-		search.sendKeys("HP CHROMEBOOK 14");
+	public MobileElement search () {
+
+		MobileElement search = driver.findElement(By.xpath(
+				"com.Advantage.aShopping:id/editTextSearch"));
+			
+		return search;
 	}
-	public void Lupa() {
-		lupa.click();
+	public MobileElement lupa () {
+
+		MobileElement lupa = driver.findElement(By.xpath(
+				"//android.view.ViewGroup[@content-desc=\\\"Home Page\\\"]/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ImageView"));
+		return lupa;
 	}
-	public void Produto() {
-		escolhendolaptop.click();
+	public MobileElement escolhendolaptop () {
+
+		MobileElement escolhendolaptop = driver.findElement(By.xpath(
+				"//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]/android.widget.TextView[1]"));
+		return escolhendolaptop;
 	}
-	public void Carinho() {
-		adicionandocarinho.click();
+	public MobileElement adicionandocarinho () {
+
+		MobileElement adicionandocarinho = driver.findElement(By.xpath(
+				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.Button"));
+				return adicionandocarinho;
 	}
-	public void SearchFalse() {
-		search.sendKeys("celular");
-	}
-	
-	
-	
+
 	
 
 }
