@@ -7,12 +7,12 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class Excel {
 	
-
+	
 		
 	
 		public  String sUsuario() throws Exception {
 			ExcelUtils.setExcelFile("C:\\Users\\joice.abreu\\Desktop\\Dados.xlsx", "Planilha1");
-			String sUsuario = ExcelUtils.getCellData(17, 0);
+			String sUsuario = ExcelUtils.getCellData(16, 0);
 			return sUsuario;
 		}
 
