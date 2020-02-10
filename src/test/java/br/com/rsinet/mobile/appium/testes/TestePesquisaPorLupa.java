@@ -18,23 +18,25 @@ import com.aventstack.extentreports.ExtentTest;
 
 import br.com.rsinet.mobile.appium.screenfactory.DriverFactory;
 import br.com.rsinet.mobile.appium.screenfactory.ScreenPesquisaPorLupa;
+import br.com.rsinet.mobile.appium.testdate.Excel;
 import br.com.rsinet.mobile.appium.utility.Report;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class TestePesquisaPorLupa {
 
-	private static AndroidDriver<MobileElement> driver;
+	private AndroidDriver<MobileElement> driver;
 	private ScreenPesquisaPorLupa pesquisa;
 	private ExtentReports extent;
 	private ExtentTest logger;
-	
+	private Excel excel;
 
 
 	@BeforeMethod
 	public void before() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
 		pesquisa = new ScreenPesquisaPorLupa(DriverFactory.InicializaDriver());
+		excel = new Excel();
 		
 	}
 	@BeforeTest
@@ -63,12 +65,12 @@ public class TestePesquisaPorLupa {
 		pesquisa.lupa().click();
 		pesquisa.escolhendolaptop().click();
 		pesquisa.adicionandocarinho().click();
-		pesquisa.usernamelogin().sendKeys("JGANA234");
-		pesquisa.passwordlogin().sendKeys("Natalice24");
+		pesquisa.usernamelogin().sendKeys(excel.sUsuario());
+		pesquisa.passwordlogin().sendKeys(excel.sSenha());
 		pesquisa.login().click();
 		pesquisa.imageviewcart().click();
 		String nomeproduto = pesquisa.nomeProduroConfirmar().getText();
-		Assert.assertTrue(nomeproduto.contains("HP Chromebook 14 G1(ES)"), "HP Chromebook 14 G1(ES)");
+		Assert.assertTrue(nomeproduto.contains(excel.sLaptop()));
 		
  
 	}	

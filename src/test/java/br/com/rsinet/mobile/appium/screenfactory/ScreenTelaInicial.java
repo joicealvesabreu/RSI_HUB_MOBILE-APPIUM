@@ -81,5 +81,9 @@ public class ScreenTelaInicial {
 		MobileElement  verificarquantidade = driver.findElement(By.id("com.Advantage.aShopping:id/textViewCartQuantity"));
 				return verificarquantidade;
 	}
+	public MobileElement nomeProduroConfirmar() {
+		MobileElement nomeProduroConfirmar = driver.findElement(By.id("com.Advantage.aShopping:id/textViewCartProductName"));
+		return  nomeProduroConfirmar;
+	}
 
 }

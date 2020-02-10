@@ -70,8 +70,9 @@ public class TesteCadastro {
 		page.city().sendKeys(excel.sCidade());
 		page.zip().sendKeys(excel.sCep());
 		page.rolartela1();
-		page.Esperar();
+		//page.Esperar();
 		page.register().click();
+		page.Esperar();
 		page.menuverificacao().click();
 		String asserts = page.menuuser().getText();
 		Assert.assertTrue(asserts.contains(excel.sUsuario()));
@@ -101,6 +102,7 @@ public class TesteCadastro {
 		page.zip().sendKeys(excel.sCep());
 		page.rolartela1();
 		page.register().click();
+		page.Esperar();
 		String asserts1 = page.verificamsgderror().getText();
 		Assert.assertTrue(asserts1.contains("REGISTER"));
 	}

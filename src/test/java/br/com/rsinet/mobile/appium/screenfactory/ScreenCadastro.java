@@ -160,7 +160,7 @@ public class ScreenCadastro {
 
 	public void Esperar() throws InterruptedException {
 		
-		 WebDriverWait wait = new WebDriverWait(driver, 10);
+	//	 WebDriverWait wait = new WebDriverWait(driver, 10);
 		 Thread.sleep(5000);
 	}
 

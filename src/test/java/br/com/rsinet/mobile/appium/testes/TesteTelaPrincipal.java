@@ -25,16 +25,17 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class TesteTelaPrincipal {
 
-	public static AndroidDriver<MobileElement> driver;
-	public ScreenTelaInicial telaprincipal;
-	public ExtentReports extent;
-	public ExtentTest logger;
+	private AndroidDriver<MobileElement> driver;
+	private ScreenTelaInicial telaprincipal;
+	private ExtentReports extent;
+	private ExtentTest logger;
+	private Excel excel;
 
 	@BeforeMethod
 	public void IniciaDriver() throws MalformedURLException, InterruptedException {
 		driver = DriverFactory.InicializaDriver();
 		telaprincipal = new ScreenTelaInicial(DriverFactory.InicializaDriver());
-		// excel = new Excel();
+	 excel = new Excel();
 
 	}
 
@@ -45,14 +46,18 @@ public class TesteTelaPrincipal {
 	}
 
 	@Test
-	public void pesquisa1ProdutoValidoTelaPrincipal() {
+	public void pesquisa1ProdutoValidoTelaPrincipal() throws Exception {
 		logger = Report.setUp("pesquisa1_Produto_Valido_Tela_Principal");
 		telaprincipal.clicarLaptop().click();
 		telaprincipal.escolhendolaptop().click();
-		Assert.assertTrue(driver.getPageSource().contains("HP CHROMEBOOK 14 G1(ES)"));
+		Assert.assertTrue(driver.getPageSource().contains(excel.sLaptop()));
 		telaprincipal.adicionandooproduto().click();
-		String chegounologin = telaprincipal.verificanomedoproduto().getText();
-		Assert.assertTrue(chegounologin.contains("Login"), "Login");
+		telaprincipal.usernamelogin().sendKeys(excel.sUsuario());
+		telaprincipal.passwordlogin().sendKeys(excel.sSenha());
+		telaprincipal.login().click();
+		telaprincipal.imageviewcart().click();
+		String chegounoproduto = telaprincipal.nomeProduroConfirmar().getText();
+		Assert.assertTrue(chegounoproduto.contains((excel.sLaptop())));
 
 	}
 
@@ -67,8 +72,8 @@ public class TesteTelaPrincipal {
 		telaprincipal.quantidadedproduto().sendKeys("45");
 		telaprincipal.apply().click();
 		telaprincipal.adicionandooproduto().click();
-		telaprincipal.usernamelogin().sendKeys("JGANA234");
-		telaprincipal.passwordlogin().sendKeys("Natalice24");
+		telaprincipal.usernamelogin().sendKeys(excel.sUsuario());
+		telaprincipal.passwordlogin().sendKeys(excel.sSenha());
 		telaprincipal.login().click();
 		telaprincipal.imageviewcart().click();
 		String tem10produtos = telaprincipal.verificarquantidade().getText();

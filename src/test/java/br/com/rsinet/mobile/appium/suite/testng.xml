@@ -4,13 +4,14 @@
 	<test name="Test">
 		<classes>
 
+			<class 
+				name="br.com.rsinet.mobile.appium.testes.TesteCadastro" />
 			<class
 				name="br.com.rsinet.mobile.appium.testes.TesteTelaPrincipal" />
-			
 			<class
 				name="br.com.rsinet.mobile.appium.testes.TestePesquisaPorLupa" />
 
-			<class name="br.com.rsinet.mobile.appium.testes.TesteCadastro" />
+
 
 		</classes>
 	</test>
